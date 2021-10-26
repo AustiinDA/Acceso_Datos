@@ -14,7 +14,7 @@ public class Ficheros_3 {
 
         try (FileReader fr = new FileReader(f)) {
             int i;
-            while ((i=fr.read())!=-1) System.out.print((char) i);
+            while ((i = fr.read()) != -1) System.out.print((char) i);
         } catch (IOException e) {
             e.printStackTrace();
         }

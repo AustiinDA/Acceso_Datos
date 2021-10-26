@@ -1,0 +1,2 @@
+public class Ficheros7 {
+}
