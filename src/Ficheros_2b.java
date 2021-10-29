@@ -15,9 +15,9 @@ public class Ficheros_2b {
             System.out.println("Contenido del directorio: ");
             System.out.println("================ " + f.getName() + " =================");
             //Rellenamos el array de archivos con nuestros archivos en la ruta
-            File[] lista = f.listFiles();
-            for (File archivos : lista) {
-                if (archivos.isFile()) System.out.println(archivos.getName());
+            File[] listaArchivos = f.listFiles();
+            for (File archivo : listaArchivos) {
+                if (archivo.isFile()) System.out.println(archivo.getName());
             }
             System.out.println("======================================================");
         } else {
