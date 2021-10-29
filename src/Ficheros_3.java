@@ -7,9 +7,10 @@ import java.util.Scanner;
 public class Ficheros_3 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Introduce la ruta del archivo: ");
+        System.out.println("Introduce la ruta al archivo para visualizar su contenido: ");
+        System.out.println("Ejemplo :  'C:\\archivo.txt'");
         String ruta = s.nextLine();
-        System.out.println(ruta);
+
         File f = new File(ruta);
 
         try (FileReader fr = new FileReader(f)) {

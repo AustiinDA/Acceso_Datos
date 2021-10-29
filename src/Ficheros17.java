@@ -9,7 +9,7 @@ public class Ficheros17 {
         Scanner s = new Scanner(System.in);
         long pos = 0;
 
-        File f = new File("C:\\Users\\Alumno_FP\\IdeaProjects\\Acceso a Datos\\ficheros\\prueba_aleatorio.txt");
+        File f = new File("prueba_aleatorio.txt");
         if (f.exists()) f.delete();
 
         RandomAccessFile fichero = new RandomAccessFile(f, "rw");
@@ -36,11 +36,11 @@ public class Ficheros17 {
                 System.out.print(fichero.readInt() + " | ");
             }
             //Leer con el escaner posicion deseada
-            System.out.println("\nÂ¿QuÃ© posiciÃ³n quiere leer?");
+            System.out.println("\n¿Qué posición quiere leer?");
             pos = (s.nextInt() - 1);
             fichero.seek(pos * 4);
 
-            System.out.println("En la posicion nÃºmero " + (pos + 1) + " se encuentra el valor nÃºmerico: "+ fichero.readInt());
+            System.out.println("En la posicion número " + (pos + 1) + " se encuentra el valor númerico: "+ fichero.readInt());
 
         } catch (IOException e) {
             e.printStackTrace();

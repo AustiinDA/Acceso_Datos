@@ -12,7 +12,7 @@ public class Ficheros4 {
         try (FileWriter fw = new FileWriter(frases)) {
             while (!frases_texto.equals("fin")) {
                 System.out.println("Escribe una frase, escribe fin para finalizar:");
-                fw.write(frases_texto + "");
+                fw.write(frases_texto + " ");
                 frases_texto = s.nextLine();
             }
 
