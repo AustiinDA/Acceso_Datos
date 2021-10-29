@@ -4,21 +4,24 @@ import java.util.Scanner;
 public class Ficheros_2b {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Introduce la ruta: ");
+        System.out.print("Introduce la ruta: ");
 
+        //Petición de entrada por consola de la ruta
         String ruta = s.nextLine();
-        System.out.println(ruta);
         File f = new File(ruta);
 
-
+        //Comprobacion si el fichero existe y es directorio
         if (f.exists() && f.isDirectory()) {
-            System.out.println("Contenido: ");
+            System.out.println("Contenido del directorio: ");
+            System.out.println("================ " + f.getName() + " =================");
+            //Rellenamos el array de archivos con nuestros archivos en la ruta
             File[] lista = f.listFiles();
             for (File archivos : lista) {
                 if (archivos.isFile()) System.out.println(archivos.getName());
             }
+            System.out.println("======================================================");
         } else {
-            System.out.println("ERROR");
+            System.out.println("ERROR, el archivo no existe o no es un directorio");
         }
 
 
